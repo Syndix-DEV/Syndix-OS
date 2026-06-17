@@ -1,0 +1,84 @@
+name: Feature Request
+description: Schlage eine neue Funktion oder Verbesserung vor.
+title: "[Feature]: "
+labels: ["feature", "triage"]
+type: feature
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deinen Vorschlag. Bitte beschreibe nicht nur die Lösung, sondern auch das Problem dahinter.
+
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Vorab geprüft
+      options:
+        - label: Ich habe geprüft, ob es bereits ein ähnliches Feature-Issue gibt.
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich
+      options:
+        - Syndix OS
+        - Syndix Dashboard
+        - Syndix API
+        - Syndix Shared
+        - Dokumentation
+        - Unklar / Sonstiges
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: Welches Problem soll gelöst werden?
+      placeholder: Aktuell ist es schwierig, ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Gewünschte Lösung
+      description: Wie stellst du dir die Funktion vor?
+      placeholder: Ich möchte, dass ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativen
+      description: Gibt es andere mögliche Lösungen?
+      placeholder: Alternativ könnte man ...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorität
+      options:
+        - Niedrig
+        - Mittel
+        - Hoch
+        - Kritisch
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Akzeptanzkriterien
+      description: Wann gilt das Feature als fertig?
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: false

@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Sicherheitslücke melden
+    url: https://tijay006.de
+    about: Bitte melde Sicherheitslücken nicht als öffentliches Issue.

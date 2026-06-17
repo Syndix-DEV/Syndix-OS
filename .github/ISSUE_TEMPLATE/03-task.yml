@@ -1,0 +1,65 @@
+name: Task
+description: Erstelle eine technische Aufgabe oder interne To-do.
+title: "[Task]: "
+labels: ["task", "triage"]
+type: task
+
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Bereich
+      options:
+        - Syndix OS
+        - Syndix Dashboard
+        - Syndix API
+        - Syndix Shared
+        - Infrastruktur
+        - Tests
+        - Dokumentation
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Aufgabe
+      description: Was soll erledigt werden?
+      placeholder: Beschreibe die Aufgabe kurz und klar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontext
+      description: Warum ist diese Aufgabe nötig?
+      placeholder: Diese Aufgabe ist nötig, weil ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Umsetzungshinweise
+      description: Technische Hinweise, betroffene Dateien, bekannte Risiken.
+      placeholder: |
+        - Betroffene Dateien:
+        - Wichtige Einschränkungen:
+        - Risiken:
+    validations:
+      required: false
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checkliste
+      description: Was muss erledigt werden?
+      value: |
+        - [ ] Implementierung
+        - [ ] Tests angepasst/ergänzt
+        - [ ] Lint/Build geprüft
+        - [ ] Keine Secrets oder sensiblen Daten geloggt
+    validations:
+      required: false
